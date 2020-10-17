@@ -1,0 +1,22 @@
+
+:root {
+/* ===============  Colors  =============
+- Dark Blue: hsl(240, 38%, 20%)
+- Grayish Blue: hsl(240, 18%, 77%)
+*/
+--dark-blue: hsl(240, 38%, 20%);
+--grayish-blue:  hsl(240, 18%, 77%);
+
+/* ===============  Fonts  =============*/
+   --ff-title: 'Inter', sans-serif;
+   --ff-body: 'Inter', sans-serif;
+   --fw-light: 300;
+   --fw-normal: 500;
+   --fw-bold: 700;
+}
+
+/* ===============  Fonts  =============
+- Font size: 32px
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 300, 500, 700
+*/
