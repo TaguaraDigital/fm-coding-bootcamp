@@ -6,16 +6,18 @@
    padding: 0;
 }
 
-body{
-   width: 100%;
-   // min-height: 100vh;
-   margin: 0; 
-   padding: 0;
+html {
    font-family: var(--ff-body);
    font-size: 18px;
-   border: solid 1px blue;
-   
-   @include table{
+   color: var(--grayish-blue);
+
+   @include desktop {
       font-size: 32px;
    }
+}
+
+body{
+   width: 100%;
+   margin: 0; 
+   padding: 0;   
 }

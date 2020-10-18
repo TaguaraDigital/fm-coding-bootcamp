@@ -1,74 +1,123 @@
-.testimonials {
-   width: 100%;
-   position: relative;
-
-   background: white;
-}
-
 .testimonial {
    width: 100%;
+   height: 100%;
+   position: relative;
+   
+   margin: 0;
+   padding: 1.39em 1.39em 4em;
+   
+   background-image: url("../assets/images/pattern-curve.svg");
+   background-position: bottom left;
+   background-repeat: no-repeat;
+   background-size: 70%;
+   overflow: hidden;
+
+   @include table {
+      padding: 1.5625em 1.5625em 4.7em;
+      background-size: 50%;
+   }
+
+   @include desktop {
+      padding: 1.5625em 2.5em 4.7em 5.15625em;
+   }
+}
+
+.testimonial__slider {
+   width: 100%;
+   height: 100%;
+   position: relative;
+}
+
+.testimonial__slide {
+   width: 100%;
+   height: 100%;
+
    display: grid;
    grid-template-columns: 1fr;
-   grid-template-rows: 1fr 1fr;
-   grid-template-areas: "im"
-            "bo";
+   grid-template-rows: repeat(2, 1fr);
+   grid-template-areas: 
+      "img"
+      "body";
    
    @include table {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 1fr;
-      grid-template-areas: "bo im";
+      grid-template-areas: "body img";
    }
+}
 
-   &__img {
-      position: relative;
-      grid-area: im;
-      width: 100%;
-      background: url("../assets/images/pattern-bg.svg") top center no-repeat;
-      background-size: contain;
-   }
+.testimonial__img {
+   width: 100%;
+   height: 100%;
+
+   grid-area: img;
+   background-image: url("../assets/images/pattern-bg.svg");
+   background-position: top center;
+   background-repeat: no-repeat;
+   background-size: contain;
+}
    
-   &__photo{
-      width: 100%;
-      display: block;
-      padding: 1.5em 2em 1em;
-      border-radius: 10px;
-   }
+.testimonial__photo{
+   width: 100%;
+   display: block;
+   padding: 1.5em 2em 1em;
+   border-radius: 10px;
+}
    
+.testimonial__body{
+   grid-area: body;
+   width: 100%;
+   margin-top: 2em;
+   position: relative;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+
+   background-image: url("../assets/images/pattern-quotes.svg");
+   background-position: top center;
+   background-repeat: no-repeat;
+   background-size: 20%;
    
-   &__body{
-      position: relative;
-      width: 100%;
-      grid-area: bo;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+   @include table {
+      align-items: start;
+      text-align: left;  
    }
+}
 
-   &__q-img {
-      width: 50%;
-      height: 10%;
-      position: absolute;
-      top: 15%;
-      background: url("../assets/images/pattern-quotes.svg") top center no-repeat;
-      background-size: contain;   
+.testimonial__quote{
+   line-height: 1.5;
+   padding: 0;
+}
+
+.testimonial__author {
+   margin-top: 1em;
+   display: flex;
+   flex-direction: column;
+   
+   @include table {
+      flex-direction: row;
    }
+}
 
-   &__quote{
-      margin-top: 10%;
-      line-height: 1.5;
-      text-align: center;
-      padding: 0;
+.testimonial__name{
+   font-size: .9em;
+   font-weight: var(--fw-bold);
+   color: var(--dark-blue);
+   
+   @include table {
+      font-size: .6875em;
+      margin-right: .2em;
    }
+}
 
-   .name{
-      margin-top: 1em;
-      font-size: 15px;
-      font-weight: var(--fw-bold);
-   }
-
-   .positions{
-      font-size: 15px;
+.testimonial__positions{
+   font-size: .9em;
+   
+   @include table {
+      font-size: .6875em;
    }
 }
 
@@ -76,7 +125,7 @@
    width: 70px;
    height: 40px;
    position: absolute;
-   bottom: 0;
+   top: 45%;
    left: 50%;
    transform: translateX(-50%);
    background-color: white;
@@ -84,26 +133,10 @@
    justify-content: space-around;
    align-items: center;
    border-radius: 20px;
-}
+   
+   @include table {
+      top: 85%;
+      left: 60%;
 
-.onda{
-   width: 100%;
-   height: 75px;
-   bottom: 0;
-   left: 0;
-   
-   &__bg{
-      position: absolute;
-      width: 100%;
-      padding: 0;
-      bottom: -15px;
-      left: 0;
-      border: 2px solid yellow;
-      background: yellowgreen;
- 
-      @include table{
-      width: 50%;
-   }
-   
    }
 }
