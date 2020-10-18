@@ -122,7 +122,7 @@
 }
 
 .navigations {
-   width: 70px;
+   width: 80px;
    height: 40px;
    position: absolute;
    top: 45%;
@@ -139,4 +139,22 @@
       left: 60%;
 
    }
+}
+
+.btn{
+   width: 25px;
+   height: 25px;
+   opacity: .8;
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   &:hover {
+      opacity: 1;
+      transform: scale(1.1);
+   }
+}
+.hidden {
+   display: none;
 }
